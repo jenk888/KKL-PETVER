@@ -1,0 +1,117 @@
+h1 {
+    font-weight: 1000;
+    letter-spacing: 3px;
+    font-size: 36px;
+    text-align: center;
+    color: #140f00;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+body {
+    background: url('../images/history.png') no-repeat center / cover;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    background: rgba(255,255,255,0.05);
+    z-index: -1;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.order-history {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* Header */
+.table th {
+    background: rgba(255,255,255,0.35);
+    color: #140f00;
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+}
+
+.table td {
+    background: rgba(255,255,255,0.20);
+    color: #222;
+    padding: 14px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.table tr:hover td {
+    background: rgba(255,255,255,0.35);
+    transition: 0.3s;
+}
+.right {
+    text-align: right;
+    padding-right: 20px;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #f8b034;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #4ffede, #00f2fe);
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.popup {
+    display: none;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+td:hover .popup {
+    display: grid !important;
+    grid-template-columns: repeat(5, auto);
+    gap: 6px;
+}
+td {
+    position: relative;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 5px;
+    z-index: 100;
+    border: 1px solid #ccc;
+}
